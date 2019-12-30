@@ -9,8 +9,14 @@
 import SwiftUI
 
 struct ContentView: View {
+  
+  var project = Project()
+  
+  
     var body: some View {
-        Text("Hello, World!")
+      List(project.projectData.indices) { index in
+        Text(self.project.projectData[index])
+      }
     }
 }
 
